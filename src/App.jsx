@@ -1,21 +1,16 @@
 import React, { useState } from "react";
-import words from "./assets/basic.json";
+import Game from "./components/Game";
+import SelectDictionary from './components/SelectDictionary';
+import { GameContextProvider } from "./GameContext";
 
 function App() {
-  const [dictionary, setDictionary] = useState(words);
-  const [currentWord, setCurrentWord] = useState("");
-
-  function getRandomWord() {
-    const r = Math.floor(Math.random() * dictionary.length);
-    setCurrentWord(dictionary[r]);
-  }
-
   return (
-    <div>
-      {" "}
-      {currentWord}
-      <button onClick={getRandomWord}>Siguiente</button>
-    </div>
+    <>
+      <GameContextProvider>
+        <SelectDictionary />
+        <Game/>
+      </GameContextProvider>
+    </>
   );
 }
 
