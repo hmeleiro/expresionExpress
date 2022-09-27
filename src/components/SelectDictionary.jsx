@@ -1,6 +1,11 @@
 import { useContext } from "react";
 import { GameContext } from "../GameContext";
 import dictionaries from "../assets/dics.json";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
+import Select from "@mui/material/Select";
+import Button from "@mui/material/Button";
 
 function SelectDictionary() {
   const { dictionary, setDictionary } = useContext(GameContext);
@@ -17,17 +22,42 @@ function SelectDictionary() {
   return (
     <>
       {dictionary.length === 0 ? (
-        <div className="select-container">
-          <select onChange={handleSelectDictionary}>
-            {dictionaryNames.map((option, i) => (
-              <option value={option} key={i}>
-                {option}{" "}
-              </option>
-            ))}
-          </select>
-        </div>
+        <>
+          <p className="description">
+            Esto es Expresión Exprés, un juego clásico de adivinar palabras a
+            contrarreloj. Se juega en dos equipos posicionados en círculo, con
+            los miembros de cada equipo intercalados entre sí. El móvil es una
+            patata caliente: hay un tiempo limitado en cada ronda, el equipo que
+            tenga el movil en la mano cuando el tiempo termina pierde, el equipo
+            contrario gana un punto y puede ganar otro adicional si adivina la
+            palabra.
+          </p>
+          <p>
+            Para comenzar el juego haz clic seleccione un pack de palabras
+            con las que jugar.
+          </p>
+
+          <FormControl sx={{ m: 1, minWidth: 150 }} size="small">
+            <InputLabel id="select-small">Palabras</InputLabel>
+            <Select
+              labelId="select-small"
+              id="select-small"
+              value={dictionary}
+              label="Pack"
+              onChange={handleSelectDictionary}
+            >
+              {dictionaryNames.map((option, i) => (
+                <MenuItem value={option} key={i}>
+                  {option}{" "}
+                </MenuItem>
+              ))}
+            </Select>
+          </FormControl>
+        </>
       ) : (
-        <button onClick={handleReturn}>Volver</button>
+        <Button variant="outlined" size="medium" onClick={handleReturn}>
+          Volver
+        </Button>
       )}
     </>
   );

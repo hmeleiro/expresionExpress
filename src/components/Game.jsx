@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import { GameContext } from "../GameContext";
 import CountDown from './CountDown';
+import Button from '@mui/material/Button';
+
 function Game() {
   const { getRandomWord, currentWord, dictionary } = useContext(GameContext);
 
@@ -10,9 +12,12 @@ function Game() {
       {dictionary.length === 0 ? (
         <div></div>
       ) : (
-        <div>
+        <div className="flex flex-row min-h-screen justify-center items-center">
           {" "}
-          {currentWord} <button onClick={getRandomWord}>Siguiente</button>{" "}
+          <h1 className="text-6xl font-extrabold m-6">{currentWord} </h1> 
+        
+          
+          <Button sx={{ boxShadow:5, borderRadius:2, mx:2, my:2 }} variant="outlined" size="medium" onClick={getRandomWord}>Siguiente</Button>{" "}
           <CountDown/>
 
         </div>
