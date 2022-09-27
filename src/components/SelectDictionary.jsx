@@ -7,7 +7,6 @@ function SelectDictionary() {
   const dictionaryNames = Object.keys(dictionaries);
 
   function handleSelectDictionary(event) {
-    console.log(dictionaries[event.target.value]);
     setDictionary(dictionaries[event.target.value]);
   }
 
