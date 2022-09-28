@@ -12,7 +12,7 @@ function Game() {
       {dictionary.length === 0 ? (
         <div></div>
       ) : (
-        <div className="flex flex-row min-h-screen justify-center items-center">
+        <div className="flex flex-wrap -mb-1">
           {" "}
           <h1 className="text-6xl font-extrabold m-6">{currentWord} </h1> 
         
