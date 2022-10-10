@@ -6,9 +6,9 @@ import { GameContextProvider } from "./GameContext";
 
 function App() {
   return (
-    <div className="h-screen place-items-center w-auto m-10">
+    <div className="h-screen">
       <GameContextProvider>
-        <div className="grid-cols-1">
+        <div>
           <SelectDictionary />
           <Game />
         </div>

@@ -10,10 +10,11 @@ import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 
 function SelectDictionary() {
-  const { dictionary, setDictionary } = useContext(GameContext);
+  const { dictionary, setDictionary, setCurrentWord} = useContext(GameContext);
   const dictionaryNames = Object.keys(dictionaries);
 
   function handleSelectDictionary(event) {
+    setCurrentWord("");
     setDictionary(dictionaries[event.target.value]);
   }
 
@@ -67,7 +68,7 @@ function SelectDictionary() {
         </>
       ) : (
         <Grid container justify="center">
-          <Button variant="outlined" size="medium" onClick={handleReturn}>
+          <Button sx={{ boxShadow:5, borderRadius:2, mx:2, my:2 }} variant="outlined" size="medium" onClick={handleReturn}>
             Volver
           </Button>
         </Grid>

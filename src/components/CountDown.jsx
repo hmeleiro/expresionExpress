@@ -2,6 +2,10 @@ import React, { useState, useEffect } from "react";
 import beep1 from "../assets/beep.mp3";
 import beepFinal from "../assets/beep-final.mp3";
 import useSound from "use-sound";
+import playIcon from '../assets/start-white.png'
+import resetIcon from '../assets/reset-white.png' 
+import pauseIcon from '../assets/pause-white.png' 
+
 
 function CountDown() {
   const [remainingTime, setRemainingTime] = useState(getRandomInt(90, 120));
@@ -59,17 +63,17 @@ function CountDown() {
 
   return (
     <>
-      <div id="countdown">
+      {/* <div id="countdown">
         <div id="countdown-number">{remainingTime} </div>
-      </div>
+      </div> */}
       <button id="pause" onClick={handlePause}>
-        <img src="https://img.icons8.com/ios-glyphs/30/000000/pause--v1.png" />
+        <img src={pauseIcon} width="60px" className="m-5"/>
       </button>
       <button id="start" onClick={handleStart}>
-        <img src="https://img.icons8.com/ios-glyphs/30/000000/play--v1.png" />
+        <img src={playIcon} width="60px" className="m-5"/>
       </button>
       <button id="reset" onClick={handleReset}>
-        <img src="https://img.icons8.com/ios-glyphs/30/000000/stop.png" />
+        <img src={resetIcon} width="60px" className="m-5"/>
       </button>
     </>
   );
