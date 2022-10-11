@@ -17,7 +17,7 @@ export function GameContextProvider(props) {
         setDictionary,
         currentWord,
         setCurrentWord,
-        getRandomWord,
+        getRandomWord
       }}
     >
       {props.children}
