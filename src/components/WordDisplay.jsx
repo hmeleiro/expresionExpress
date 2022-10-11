@@ -19,8 +19,7 @@ function WordDisplay() {
 
         <Box textAlign="center" sx={{ m: 2 }}>
           <Button
-            
-            color="primary"
+          color="button"
             sx={{
               boxShadow: 8,
               borderRadius: 2,

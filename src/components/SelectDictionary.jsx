@@ -26,7 +26,7 @@ function SelectDictionary() {
     <>
       {dictionary.length === 0 ? (
         <>
-          <p className="text-center m-4 p-0 text-white">
+          <p className="text-center text-xl m-2 p-5 text-white">
             Esto es Expresión Exprés, un juego clásico de adivinar palabras a
             contrarreloj. Se juega en dos equipos posicionados en círculo, con
             los miembros de cada equipo intercalados entre sí. El móvil es una
@@ -35,18 +35,28 @@ function SelectDictionary() {
             contrario gana un punto y puede ganar otro adicional si adivina la
             palabra.
           </p>
-          <p className="text-center m-2 p-0 text-white">
+          <p className="text-center text-xl m-2 p-2 text-white">
             Para comenzar el juego haz clic seleccione un pack de palabras con
             las que jugar.
           </p>
 
           <Box display="flex" height={100} justifyContent="center">
             <FormControl
-              sx={{ m: 1, minWidth: 150, alignSelf: "center"}}
+              variant="filled"
+              sx={{
+                m: 1,
+                minWidth: 250,
+                alignSelf: "center",
+                backgroundColor: "button.main",
+                outlineColor: "#af0000",
+                borderColor: "#af0000",
+                boxShadow: 4,
+                borderRadius: 2,
+              }}
               size="small"
             >
-              <InputLabel id="select-small" color="primary" >
-                Palabras
+              <InputLabel id="select-small" sx={{ color: "black" }}>
+                Selecciona un diccionario
               </InputLabel>
               <Select
                 labelId="select-small"

@@ -11,15 +11,18 @@ const theme = createTheme({
   },
   palette: {
     primary: {
-      main: "#ffffff",
-      darker: "#ffffff",
+      main: "#edf2f4",
+      darker: "#8d99ae",
     },
     neutral: {
-      main: "#ffffff",
-      contrastText: "#ffffff",
+      main: "#8d99ae",
+      contrastText: "#edf2f4",
     },
-    error: {
-      main: "#c90000"
+    background: {
+      main: "#2b2d42"
+    },
+    button: {
+      main: "#ffffff"
     }
   },
 });
@@ -27,7 +30,7 @@ const theme = createTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <div className="h-screen bg-gray-600">
+      <div className="h-screen bg-stone-700">
         <GameContextProvider>
           <div>
             <SelectDictionary />
