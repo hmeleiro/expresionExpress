@@ -10,7 +10,7 @@ const theme = createTheme({
   },
   palette: {
     primary: {
-      main: "#edf2f4",
+      main: "#000000",
       darker: "#8d99ae",
     },
     neutral: {
@@ -31,9 +31,9 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <div className="h-screen bg-stone-800">
+      <main className="flex flex-wrap h-screen w-screen bg-stone-800">
         <GameContextProvider>
-          <div>
+          <div className="container mx-auto">
             {/* <button
               className="text-white rounded bg-slate-500 m-4 p-4"
               onClick={handleFs.enter}
@@ -41,14 +41,14 @@ function App() {
               Pantalla completa
             </button> */}
 
-            <FullScreen id ="fsprueba" handle={handleFs}>
+            {/* <FullScreen id ="fsprueba" handle={handleFs}> */}
             <LandingPage />
               
               
-            </FullScreen>
+            {/* </FullScreen> */}
           </div>
         </GameContextProvider>
-      </div>
+      </main>
     </ThemeProvider>
   );
 }

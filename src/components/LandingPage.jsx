@@ -35,8 +35,8 @@ function LandingPage() {
         <>
         <Grid container justify="center">
           <Button
-            sx={{ boxShadow: 5, borderRadius: 2, mx: 2, my: 2 }}
-            variant="outlined"
+            sx={{ backgroundColor: "button.main", boxShadow: 5, borderRadius: 2, mx: 2, my: 2 }}
+            variant="filled"
             size="medium"
             onClick={handleReturn}
           >

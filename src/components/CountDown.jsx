@@ -67,13 +67,13 @@ function CountDown() {
         <div id="countdown-number">{remainingTime} </div>
       </div> */}
       <button id="pause" onClick={handlePause}>
-        <img src={pauseIcon} width="60px" className="m-5"/>
+        <img src={pauseIcon} width="60px" className="m-2"/>
       </button>
       <button id="start" onClick={handleStart}>
-        <img src={playIcon} width="60px" className="m-5"/>
+        <img src={playIcon} width="60px" className="m-2"/>
       </button>
       <button id="reset" onClick={handleReset}>
-        <img src={resetIcon} width="60px" className="m-5"/>
+        <img src={resetIcon} width="60px" className="m-2"/>
       </button>
     </>
   );

@@ -10,14 +10,14 @@ function WordDisplay() {
 
   return (
     <>
-      <div className="grid grid-rows-2 justify-center h-40">
-        <div className="h-24">
+      <div className="grid grid-rows-2 justify-center h-50">
+        {/* <div className="h-24"> */}
           <h1 className="text-6xl font-extrabold mt-3 text-center text-white">
             {currentWord}{" "}
           </h1>
-        </div>
+        {/* </div> */}
 
-        <Box textAlign="center" sx={{ m: 2 }}>
+        <Box textAlign="center" sx={{ m: 2, p:0 }}>
           <Button
           color="button"
             sx={{

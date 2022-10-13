@@ -28,14 +28,12 @@ function SelectDictionary() {
             minWidth: 250,
             alignSelf: "center",
             backgroundColor: "button.main",
-            outlineColor: "#af0000",
-            borderColor: "#af0000",
             boxShadow: 4,
             borderRadius: 2,
           }}
           size="small"
         >
-          <InputLabel id="select-small" sx={{ color: "black" }}>
+          <InputLabel id="select-small" sx={{ color: "#000000" }}>
             Selecciona un diccionario
           </InputLabel>
           <Select
